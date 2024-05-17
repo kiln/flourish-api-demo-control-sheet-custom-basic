@@ -1,0 +1,4 @@
+﻿container,base_chart,direct_chart,chart_type,title,subtitle
+#bar-chart,16813488,,bar_grouped,This is a base chart,It's built by the API
+#column-chart,16813488,,column_grouped,This is another base chart,...with some changed settings
+#direct-chart,,16813591,,Hello you

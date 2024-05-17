@@ -1,0 +1,29 @@
+/* General */
+body {
+  background-color: #ffffff;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #ccc;
+  margin: 3rem 0;
+}
+
+/* Chart */
+.chart {
+  position: relative;
+  width: 100%;
+  /* base charts height is determined by API chart */
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0px 40px 80px rgba(214, 194, 193, 0.3);
+  border-radius: 3px;
+}
+
+.direct.chart {
+  /* direct chart height set (could move to control sheet) */
+  height: 500px;
+}
