@@ -40,9 +40,7 @@ The following documents each column of the given [control sheet](data/control-sh
 `direct_chart`: A Flourish chart ID of a published Flourish chart that gets embedded directly rather than built by the Live API. Useful escape hatch if you want to show a chart as is without any control sheet or data configurations.
 
 > [!NOTE]
-> `app.js` gets the base chart configuration via the public endpoint `https://public.flourish.studio/visualisation/${<base chart ID>}/visualisation-object.json`. An alternative would be to use the Live API's `base_visualisation_id` property (see [here](https://developers.flourish.studio/api/replicate-visualization/#2-call-the-api-passing-in-base_visualisation_id)). In this case, the bindings and data would be in an array-of-arrays format and would need to be updated in or converted into an array-of-arrays format.
->
-> By pulling from the public `/visualisation-object.json` endpoint, bindings and data of the base chart configuration as well as the separately JSON fetched data is consistently in an array-of-objects format.
+> `app.js` gets the base chart configuration via the public endpoint `https://public.flourish.studio/visualisation/${<base chart ID>}/visualisation-object.json`. An alternative would be to use the Live API's `base_visualisation_id` property (see [here](https://developers.flourish.studio/api/replicate-visualization/#2-call-the-api-passing-in-base_visualisation_id)). As we're adding data in an array-of-objects format, you would also want to set the `base_visualisation_data_format` property to `"object"`.
 
 `chart_type`: This example only works with the [Line, Bar, Pie template](https://app.flourish.studio/@flourish/line-bar-pie/24#chart_type), which allows you to specify different types of charts.
 
