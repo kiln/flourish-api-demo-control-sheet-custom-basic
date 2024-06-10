@@ -62,6 +62,8 @@ function buildAPIChart(controlData, dataset) {
     template: baseChartConfig.template,
     version: baseChartConfig.version,
     container: controlSheetData.container,
+    // Pull through data typing info if it exists
+    metadata: baseChartConfig.metadata || {},
   };
 
   // The settings (`state`) and the bindings are being taken straight from the
@@ -137,8 +139,8 @@ function buildVisual(chartControlData, dataset) {
 
 async function main(controlData, dataset) {
   // Add base chart configurations to each `controlData` row
-  await getBaseChartConfig(controlData);
-  for (const chart of controlData) buildVisual(chart, dataset);
+  const augmentedControlData = await getBaseChartConfig(controlData);
+  for (const chart of augmentedControlData) buildVisual(chart, dataset);
 }
 
 /* Fetch data */
