@@ -62,6 +62,8 @@ function buildAPIChart(controlData, dataset) {
     template: baseChartConfig.template,
     version: baseChartConfig.version,
     container: controlSheetData.container,
+    // Pull through data typing info if it exists
+    metadata: baseChartConfig.metadata || {},
   };
 
   // The settings (`state`) and the bindings are being taken straight from the
