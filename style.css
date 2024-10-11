@@ -1,11 +1,11 @@
 /* General */
 body {
+  font-family: Inter, sans-serif;
   background-color: #ffffff;
 }
 
 h1 {
   text-align: center;
-  font-family: "Source Sans Pro", sans-serif;
   color: #ccc;
   margin: 3rem 0;
 }
